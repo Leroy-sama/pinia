@@ -4,7 +4,7 @@
         <div class="icons">
             <i
                 class="fa-solid fa-trash"
-                @click="taskStore.deleteTask(task.id)"
+                @click="taskStore.deleteTasks(task.id)"
             ></i>
             <i
                 :class="{ active: task.isFav }"
@@ -19,5 +19,5 @@
     import { useTaskStore } from "../store/taskStore";
     const props = defineProps(["task"]);
 
-    const store = useTaskStore();
+    const taskStore = useTaskStore();
 </script>
